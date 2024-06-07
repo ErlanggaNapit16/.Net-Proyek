@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.Master.cs" Inherits="Perpustakaan_kel11.View.Admin.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="../../Asset/Lib/Bootstrap/css/bootstrap.min.css" />
+    <style>
+        /* CSS tambahan */
+        /* Ganti warna background navbar */
+        .navbar {
+            background-color: #dc3545; /* Contoh: warna merah */
+        }
+
+        /* Ganti warna teks pada navbar */
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #fff; /* Contoh: warna putih */
+        }
+
+        /* Ganti warna teks pada navbar saat dihover */
+        .navbar-nav .nav-link:hover {
+            color: #ffc107; /* Contoh: warna kuning */
+        }
+
+        /* Ganti warna toggle icon navbar */
+        .navbar-toggler-icon {
+            background-color: #fff; /* Contoh: warna putih */
+        }
+
+        /* Atur margin kanan pada navbar-brand agar tidak menempel pada navbar toggler */
+        .navbar-brand {
+            margin-right: 2rem; /* Sesuaikan dengan preferensi Anda */
+        }
+
+        /* Buat efek transisi pada navbar saat dihover */
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease; /* Ubah warna dengan durasi 0.3 detik */
+        }
+
+        /* Gaya tambahan untuk judul halaman */
+        .page-title {
+            color: #dc3545; /* Warna judul */
+            text-align: center; /* Posisi teks ke tengah */
+        }
+
+        /* Gaya tambahan untuk card */
+        .card {
+            border-radius: 15px; /* Sudut elemen card */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+            transition: box-shadow 0.3s ease; /* Transisi bayangan */
+        }
+
+        /* Efek bayangan tambahan saat hover */
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Dashboard.aspx">Perpustakaan_Kel11</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product.aspx">Product</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Kategori.aspx">Categories</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="User.aspx">User</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Dashboard.aspx">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Login.aspx">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="Mybody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="../../Asset/Lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
